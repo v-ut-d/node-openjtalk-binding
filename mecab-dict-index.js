@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const binary = require("@tignear/node-pre-gyp");
 const path = require('path');
 const meta = binary.meta(path.resolve(path.join(__dirname, './package.json')));
