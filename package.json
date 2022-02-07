@@ -21,6 +21,9 @@
     "install": "node-pre-gyp install --fallback-to-build",
     "build": "node-pre-gyp install build package"
   },
+  "bin": {
+    "mecab-naist-jdic":"mecab-naist-jdic.js"
+  },
   "homepage": "https://tignear.github.io/node-openjtalk-binding/v1.2.0",
   "gypfile": true,
   "devDependencies": {
