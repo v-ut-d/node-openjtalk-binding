@@ -9,3 +9,15 @@ const mecab = spawn(path_to_mecab_dict_index, process.argv.slice(2));
 process.stdin.pipe(mecab.stdin);
 mecab.stdout.pipe(process.stdout);
 mecab.stderr.pipe(process.stderr);
+
+function exitHandler(signal) {
+    if (mecab.exitCode === null) {
+        mecab.kill(signal);
+    }
+}
+
+process.on('exit', exitHandler);
+process.on('SIGINT', exitHandler);
+process.on('SIGUSR1', exitHandler);
+process.on('SIGUSR2', exitHandler);
+process.on('uncaughtException', exitHandler);
