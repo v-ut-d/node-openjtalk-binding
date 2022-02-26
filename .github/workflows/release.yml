@@ -29,7 +29,7 @@ jobs:
         run: yarn run build
 
       - name: Upload prebuild asset
-        uses: icrawl/action-artifact@v2
+        uses: actions/upload-artifact@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -60,7 +60,7 @@ jobs:
         run: yarn build
 
       - name: Upload prebuild asset
-        uses: icrawl/action-artifact@v2
+        uses: actions/upload-artifact@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
