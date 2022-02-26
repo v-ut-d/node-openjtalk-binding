@@ -110,6 +110,20 @@
             ]
         },
         {
+            "target_name": "action_after_build_dic_tool",
+            "type": "none",
+            "dependencies": ["openjtalk"],
+            "copies": [
+                {
+                    "files": [
+                        "<(PRODUCT_DIR)/mecab-dict-index<(EXECUTABLE_SUFFIX)",
+                     ],
+                    "destination": "<(module_path)"
+                }
+            ]
+
+        },
+        {
             "target_name": "action_after_build_dic",
             "type": "none",
             "dependencies": ["openjtalk"],

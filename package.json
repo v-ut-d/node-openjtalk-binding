@@ -4,7 +4,7 @@
   "main": "addon.js",
   "types": "addon.d.ts",
   "license": "(MIT OR Unlicense)",
-  "description": "Simple binding of OpenJTalk",
+  "description": "Simple binding of OpenJTalk - modified for VUTD",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tignear/node-openjtalk-binding.git"
@@ -20,6 +20,9 @@
     "type": "tsc",
     "install": "node-pre-gyp install --fallback-to-build",
     "build": "node-pre-gyp install build package"
+  },
+  "bin": {
+    "mecab-dict-index":"mecab-dict-index.js"
   },
   "homepage": "https://tignear.github.io/node-openjtalk-binding/v1.2.0",
   "gypfile": true,
