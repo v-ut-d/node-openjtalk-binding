@@ -8,6 +8,7 @@ jobs:
     name: Prebuild
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [macos-10.15, ubuntu-20.04, ubuntu-18.04, windows-2019]
         node: [12, 14, 16, 17]
@@ -41,6 +42,7 @@ jobs:
     container:
       image: node:${{ matrix.node }}-alpine
     strategy:
+      fail-fast: false
       matrix:
         node: [12, 14, 16, 17]
     steps:
