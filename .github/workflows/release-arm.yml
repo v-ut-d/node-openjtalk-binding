@@ -29,11 +29,11 @@ jobs:
 
       - name: Package prebuild
         run: |
-          sudo apt install g++-arm-linux-gnueabihf
+          sudo apt install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           rm openjtalk/mecab-naist-jdic/*.bin openjtalk/mecab-naist-jdic/*.dic
           cp prebuild/*/dictionary/* openjtalk/mecab-naist-jdic
           sed -i -e 's/"openjtalk\/mecab-naist-jdic\/build.gyp:\*",//g'  binding.gyp
-          CC=arm-linux-gnueabihf-gcc CXX=arm-linux-gnueabihf-g++ yarn build-arm
+          CC=gcc-aarch64-linux-gnu-gcc CXX=g++-aarch64-linux-gnu yarn build-arm
 
 
       - name: Upload prebuild asset
