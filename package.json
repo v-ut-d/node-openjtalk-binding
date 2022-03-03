@@ -1,6 +1,6 @@
 {
   "name": "node-openjtalk-binding",
-  "version": "1.99.1",
+  "version": "1.99.2",
   "main": "addon.js",
   "types": "addon.d.ts",
   "license": "(MIT OR Unlicense)",
@@ -19,7 +19,8 @@
     "docs": "jsdoc -c ./jsdoc.json",
     "type": "tsc",
     "install": "node-pre-gyp install --fallback-to-build",
-    "build": "node-pre-gyp install build package"
+    "build": "node-pre-gyp install build package",
+    "build-arm": "mkdir -p build-tmp-napi-v5&&node-pre-gyp --target_arch=arm64 configure build package"
   },
   "homepage": "https://tignear.github.io/node-openjtalk-binding/v1.2.0",
   "gypfile": true,
