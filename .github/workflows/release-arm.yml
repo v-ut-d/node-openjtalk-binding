@@ -33,7 +33,7 @@ jobs:
           rm openjtalk/mecab-naist-jdic/*.bin openjtalk/mecab-naist-jdic/*.dic
           cp prebuild/*/dictionary/* openjtalk/mecab-naist-jdic
           sed -i -e 's/"openjtalk\/mecab-naist-jdic\/build.gyp:\*",//g'  binding.gyp
-          CC=gcc-aarch64-linux-gnu CXX=g++-aarch64-linux-gnu yarn build-arm
+          CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++ yarn build-arm
 
 
       - name: Upload prebuild asset
