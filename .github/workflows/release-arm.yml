@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-20.04, ubuntu-18.04]
+        os: [ubuntu-20.04, ubuntu-18.04, ubuntu-18.10]
         node: [12, 14, 16, 17]
     steps:
       - name: Checkout repository
