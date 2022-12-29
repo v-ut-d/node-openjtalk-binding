@@ -1,6 +1,6 @@
 {
   "name": "node-openjtalk-binding",
-  "version": "1.99.2",
+  "version": "1.99.3",
   "main": "addon.js",
   "types": "addon.d.ts",
   "license": "(MIT OR Unlicense)",
@@ -23,7 +23,7 @@
     "build-arm": "mkdir -p build-tmp-napi-v5&&node-pre-gyp --target_arch=arm64 configure build package"
   },
   "bin": {
-    "mecab-dict-index":"mecab-dict-index.js"
+    "mecab-dict-index": "mecab-dict-index.js"
   },
   "homepage": "https://tignear.github.io/node-openjtalk-binding/v1.2.0",
   "gypfile": true,
